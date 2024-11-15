@@ -1,0 +1,136 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect1.CautareHotel"
+             BackgroundColor="#f0f8ff">
+
+    <ScrollView>
+        <StackLayout Padding="20"
+                     Spacing="25">
+
+            <!-- Title -->
+            <Label Text="Travel Personality Test"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#0077b6" />
+
+            <!-- Question 1: RadioButton -->
+            <Label FontSize="20"
+                   FontAttributes="Bold"
+                   Text="1. What type of environment do you prefer?"
+                   TextColor="#023e8a" />
+            <StackLayout Padding="10"
+                         Spacing="10"
+                         BackgroundColor="#e8f4fa"
+                         >
+                <RadioButton Content="Mountains (Adventurer)"
+                             GroupName="Environment"
+                             Value="Adventurer"
+                             TextColor="#03045e"
+                             CheckedChanged="OnRadioButtonCheckedChanged" />
+                <RadioButton Content="Historical cities (Cultural Enthusiast)"
+                             GroupName="Environment"
+                             Value="Cultural Enthusiast"
+                             TextColor="#03045e"
+                             CheckedChanged="OnRadioButtonCheckedChanged" />
+                <RadioButton Content="Beaches (Relaxation Seeker)"
+                             GroupName="Environment"
+                             Value="Relaxation Seeker"
+                             TextColor="#03045e"
+                             CheckedChanged="OnRadioButtonCheckedChanged" />
+                <RadioButton Content="Metropolitan areas (Urban Explorer)"
+                             GroupName="Environment"
+                             Value="Urban Explorer"
+                             TextColor="#03045e"
+                             CheckedChanged="OnRadioButtonCheckedChanged" />
+            </StackLayout>
+
+            <!-- Question 2: CheckBox -->
+            <Label FontSize="20"
+                   FontAttributes="Bold"
+                   Text="2. What do you enjoy most about traveling? (Select multiple)"
+                   TextColor="#023e8a" />
+
+            <StackLayout Padding="10"
+                         BackgroundColor="#e8f4fa"
+                       
+                         Spacing="15">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <CheckBox x:Name="adventureCheckBox"
+                              Color="#0077b6"
+                              CheckedChanged="OnCheckBoxCheckedChanged" />
+                    <Label Text="Adventure activities (Adventurer)"
+                           VerticalOptions="Center"
+                           TextColor="#03045e" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <CheckBox x:Name="cultureCheckBox"
+                              Color="#0077b6"
+                              CheckedChanged="OnCheckBoxCheckedChanged" />
+                    <Label Text="Cultural experiences (Cultural Enthusiast)"
+                           VerticalOptions="Center"
+                           TextColor="#03045e" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <CheckBox x:Name="relaxationCheckBox"
+                              Color="#0077b6"
+                              CheckedChanged="OnCheckBoxCheckedChanged" />
+                    <Label Text="Relaxation spots (Relaxation Seeker)"
+                           VerticalOptions="Center"
+                           TextColor="#03045e" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <CheckBox x:Name="urbanCheckBox"
+                              Color="#0077b6"
+                              CheckedChanged="OnCheckBoxCheckedChanged" />
+                    <Label Text="Urban nightlife (Urban Explorer)"
+                           VerticalOptions="Center"
+                           TextColor="#03045e" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Question 3: Switch -->
+            <Label FontSize="20"
+                   FontAttributes="Bold"
+                   Text="3. Do you prefer group travel?"
+                   TextColor="#023e8a" />
+            <StackLayout Orientation="Horizontal"
+                         Padding="10"
+                         BackgroundColor="#e8f4fa"
+                         
+                         Spacing="15">
+                <Label Text="No"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       TextColor="#03045e" />
+                <Switch x:Name="GroupTravelSwitch"
+                        ThumbColor="#0077b6"
+                        OnColor="#48cae4"
+                        Toggled="OnSwitchToggled" />
+                <Label Text="Yes"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       TextColor="#03045e" />
+            </StackLayout>
+
+            <!-- Submit Button -->
+            <Button Text="Submit"
+                    BackgroundColor="#0077b6"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    CornerRadius="20"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Clicked="OnSubmitButtonClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
